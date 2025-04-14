@@ -1,0 +1,35 @@
+main {
+    display: flex;
+    flex-direction: column;
+    place-items: center;
+    max-width: 800px;
+    margin: 0 auto;
+    font-family: system-ui;
+    
+}
+
+/* Esto para alinear todo verticalmente/en fila y la de arriba para hacerlo en columna
+En el return seria asi: 
+ return (
+        <main>
+            <h1>App</h1>
+            <section>
+            {fact && <p>{fact}</p>}
+            {imageUrl && <img src={imageUrl} alt={'Image extrated using the three firsts words for ${fact}'}/>}
+            </section>
+        </main>
+    )
+}
+*/
+
+ section{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 2rem;
+ }
+
+ section img{
+    max-width: 320px;
+    height: auto;
+ }

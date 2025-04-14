@@ -43,4 +43,16 @@ npm install standard -D ->Despues añadir esto al json
   }
 ------------------------------------------------------
 
+Tras esto en el main.js -> pasa a main.jsx y este seria el contenido: 
 
+import {createRoot} from 'react-dom/client';
+import {App} from './App.jsx';
+
+const root = createRoot(document.getElementById('app'))
+
+root.render(
+  <App />
+)
+
+Hay que crear el App.jsx
+------------------------------------------------------
