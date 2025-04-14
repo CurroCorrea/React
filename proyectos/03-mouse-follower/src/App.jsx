@@ -1,9 +1,11 @@
 import { useEffect, useState } from "react"
 
+//Componente donde se aloja la logica del puntero
 const FollowMouse = () => {
 
   const [enabled, setEnabled] = useState(false)
   const [position, setPosition] = useState({ x: 0, y: 0 })
+
 
  //Vamos a hacer q se ejecute cada vez q cambie el enabled para que se renderice
  useEffect(() => {
@@ -64,24 +66,25 @@ useEffect(() => {
       height: 50,
       //Aqui se usa el estado, usando la posicion del estado
       transform: `translate(${position.x}px, ${position.y}px)`
-    }} /><button onClick={() => setEnabled(!enabled)}>
+    }} 
+    />
+    <button onClick={() => setEnabled(!enabled)}>
         {enabled ? 'Desactivar' : 'Activar'} seguir puntero
       </button>
       </>
   )
 }
 
+//Componente principal
 function App() {
 
   const [mounted, setMounted] = useState(true)
 
 
 
-  //OnClick ==> Si esta activo, hacemos lo contrario
-  //Hemos hecho un boton que hace un renderizado condicional que renderiza el componente 
-  //que sigue al mouse, entonces hay dos botones, uno para seguir el puntero y otro para desmontar 
-  //el componente de seguir el puntero
-  //Siempre que se monta el componente, se ejecuta el cleanup para limpiarlo
+  //El mounted es un estado que se va a encargar de renderizar el componente
+  //Es una condicional
+  //Si mounted es true, renderiza el componente
   return (
 <>
     <main>

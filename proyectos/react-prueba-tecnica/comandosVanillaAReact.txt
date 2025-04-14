@@ -1,0 +1,46 @@
+npm install @vitejs/plugin-react -E -> Para inicializar React desde JS Vanilla , -E para la ult version
+
+Lo siguiente a instalar son las dependencias de react en el json
+
+npm install react react-dom -E -> Esta es la que tiene los bindins con el navegador y otra que es la biblioteca de React
+
+Luego se crea la configuracion de vitejs -> creas un vite.config.js
+
+=========================================0
+
+import { defineConfig } from "vite";
+import react from "@vitejs/plugin-react";
+
+export default defineConfig({
+    plugins: [react()]
+})
+
+==========================================
+
+Dsp, en el punto de entrada de tu app, el main.js, importas el createRoot y renderizas el primer componente
+
+==========================================
+
+import {createRoot} from 'react-dom/client';
+
+const root = createRoot(document.getElementById('app'))
+
+root.render(
+  <h1>Hola mundo</h1>
+)
+
+==========================================
+
+Luego hay q renombrar el main a .jsx y cambiarlo en el index
+Esto ocurre porque react solo funciona en el compilador jsx
+
+Lo siguiente es instalar el linter standard
+
+npm install standard -D ->Despues añadir esto al json
+
+"eslintConfig": {
+    "extends":["./node_modules/standard/eslintrc.json"]
+  }
+------------------------------------------------------
+
+
