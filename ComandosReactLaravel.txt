@@ -1,7 +1,0 @@
-laravel new guide-to-laravel-and-react -> empieza la creación del proyecto, se elije react, laravel como 						autenticación,pest como testing.
-
-Aquí voy a escribir datos importantes que vaya cogiendo de react:
-
-Lo principal, es que parace mucho pero todo esta dividido muy bien.
-Lo segundo, siguiendo el starter Kit 12, ya te crea el dashboard, solo habría que reutilizarlo para lo que queramos
-En app-sidebar.tsx, podemos aumentar las opciones que se encuentran en el sidevar
